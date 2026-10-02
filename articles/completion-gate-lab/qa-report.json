@@ -1,0 +1,64 @@
+{
+  "scope": "new standalone teaching lab only; not production verifier or payment validation",
+  "python_version": "3.13.5",
+  "platform": "Linux",
+  "source_sha256": "4874eaf4f1056e30be37d4cfd54eca73726bb1778fe3150ae84c1ecfe0ab9400",
+  "static_parse_and_compile": "passed",
+  "source_import_allowlist": [
+    "__future__",
+    "dataclasses",
+    "enum",
+    "hashlib",
+    "itertools",
+    "json",
+    "math",
+    "unittest"
+  ],
+  "network_socket_creation": "blocked during all test suites",
+  "baseline": {
+    "tests_run": 26,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  "matrix_distinct_cases_within_one_test": 64,
+  "matrix_dimensions": [
+    "transport",
+    "resource",
+    "freshness",
+    "http_status",
+    "ready",
+    "revision"
+  ],
+  "mutations": {
+    "ignore_http_status": {
+      "tests_run": 26,
+      "failures": 2,
+      "errors": 0,
+      "passed": false,
+      "caught_by_assertions": true
+    },
+    "accept_ready_or_revision": {
+      "tests_run": 26,
+      "failures": 4,
+      "errors": 0,
+      "passed": false,
+      "caught_by_assertions": true
+    },
+    "ignore_evidence_age": {
+      "tests_run": 26,
+      "failures": 9,
+      "errors": 0,
+      "passed": false,
+      "caught_by_assertions": true
+    },
+    "ignore_release_identity": {
+      "tests_run": 26,
+      "failures": 2,
+      "errors": 0,
+      "passed": false,
+      "caught_by_assertions": true
+    }
+  },
+  "passed": true
+}
