@@ -15,6 +15,10 @@ Live endpoint:
 
 Price: **0.003 USDC per verification** on Base via x402 v2.
 
+Product page: https://vps-62-120.cloudhosting.lv:8443/completion-verifier
+
+Free demo: https://vps-62-120.cloudhosting.lv:8443/api/postcondition-demo
+
 ## What it verifies
 
 - expected HTTP status
@@ -73,6 +77,8 @@ Unpaid calls return HTTP 402 with x402 v2 payment requirements. A valid paid ret
 }
 ```
 
+Machine policy: [`AGENTS.md`](AGENTS.md) · [curl example](examples/curl.md) · [agent loop](examples/agent-loop.md)
+
 ## Agent integration pattern
 
 1. Agent performs an external action.
@@ -100,7 +106,7 @@ This is point-in-time evidence, not historical uptime and not proof of hidden/pr
 
 ## Release gate
 
-Release gate **PASSED**: the exact production helper completed **5,000,000 deterministic synthetic cases with 0 errors** in 197.24 seconds (25,349.9 cases/s).
+Release gate **PASSED**: the exact production helper completed **5,000,000 deterministic synthetic cases across 16 scenario families with 0 errors** in **120.984 seconds** (**41,327.7 cases/s**) while the live API health endpoint remained HTTP 200. Public evidence: [`release-gate.json`](release-gate.json) · harness: [`release-gate.py`](release-gate.py) · artifact SHA-256 `be80035db5af1b2a041dfa9cc04ce0cfb60fbdcedc7cc0e3bbcf5acc4e6a26ef`.
 
 ## Related BABYDOV products
 
