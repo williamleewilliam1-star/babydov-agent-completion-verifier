@@ -2,6 +2,11 @@
 
 **Verify before you trust. Pay only for evidence.**
 
+![BABYDOV Agent Completion Verifier launch one-pager](assets/launch-onepager.png)
+
+**Launch assets:** [square social card](assets/social-card.png) · [editable Figma launch kit](https://www.figma.com/design/bqfQM0VR86ukK8ohRl7YZj)
+
+
 AI agents can report success even when the final external state is wrong, incomplete, not persisted, or silently failed. Agent Completion Verifier adds an independent postcondition check after a write, deploy, tool call, or public-state change.
 
 Live endpoint:
